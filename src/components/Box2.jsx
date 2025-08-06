@@ -19,7 +19,7 @@ function Box2() {
 
       {/* Centered Card */}
       <div className="flex-grow flex justify-center items-center">
-        <div className="bg-white text-black rounded-2xl shadow-lg w-full max-w-md py-10 px-6 sm:px-10">
+        <div className="bg-white text-black rounded-2xl shadow-lg w-full max-w-md py-10 px-6 sm:px-16">
           <h2 className="font-bold text-gray-600 mb-4 text-center text-lg sm:text-xl">
             Clientside Pro Lifetime Access
           </h2>

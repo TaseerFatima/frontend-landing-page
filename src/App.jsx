@@ -106,8 +106,12 @@ useEffect(() => {
       <Content2/>
       <Box2/>
       <footer className="  p-8 mx-16  "><hr className="mt-8"></hr>
-      <p className="mt-4 font-bold flex justify-between items-center text-gray-600">© 2023 Clientside, LLC.
-      <a href="/" target="_blank"><img src="Tiktok.webp" className="w-5 h-5"/></a></p></footer>
+              <p className="text-sm sm:text-base flex justify-between font-bold">
+          © {new Date().getFullYear()} Clientside, LLC.
+          <a href="/" target="_blank" rel="noopener noreferrer" className="inline-block ml-4">
+            <img src="/Tiktok.webp" alt="TikTok Logo" className="w-5 h-5 inline" />
+          </a>
+        </p></footer>
     </div>
   );
 }

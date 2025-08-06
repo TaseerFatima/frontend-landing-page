@@ -155,7 +155,7 @@ useEffect(() => {
 
 </div>
 
-    <div className='mb-32 '>
+    <div className='mb-16 '>
         <h1 data-aos="zoom-in" className=" text-6xl text-center text-black font-sans font-bold">
         Congrats! You're going to<br></br> ace your next interview!
         </h1>
