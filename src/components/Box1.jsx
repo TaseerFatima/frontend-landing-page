@@ -1,8 +1,17 @@
-
-
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function Box1() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true,     
+    });
+  }, []);
+
   return (
     <div className="relative bg-gradient-to-tl from-[#0e0f2c] via-[#270635] to-[#300825] flex flex-col items-center h-[800px] py-20">
       
@@ -22,7 +31,7 @@ function Box1() {
       <div className="flex-grow" />
 
 
-      <div className="absolute -bottom-10 bg-gradient-to-tl from-gray-700 to-black text-2xl font-mono rounded-xl shadow-lg px-32 py-12 text-white text-left w-fit mb-8">
+      <div data-aos="fade-up" className="absolute -bottom-10 bg-gradient-to-tl from-gray-700 to-black text-2xl font-mono rounded-xl shadow-lg px-32 py-12 text-white text-left w-fit mb-8">
         <pre className="leading-10">
           <ol className="list-decimal list-inside space-y-3">
             <li>

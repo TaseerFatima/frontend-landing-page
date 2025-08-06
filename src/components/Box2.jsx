@@ -2,32 +2,36 @@ import React from "react";
 
 function Box2() {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col p-20">
+    <div className="min-h-screen bg-black text-white flex flex-col px-6 py-16 sm:px-10 md:px-20 lg:px-24">
       {/* Top Heading */}
       <div className="mb-12">
-        <h2 className="text-5xl font-bold text-white text-center leading-tight">
-          Access the
-          <span className="text-purple-400"> #1 Frontend <br /> Training Platform</span>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-purple-200 to-purple-700 text-transparent bg-clip-text text-center leading-tight ">
+          Access the  #1 Frontend
+          <span >
+            <br /> Training Platform
+          </span>
         </h2>
-        <p className="text-3xl text-white mt-4 text-center">
-          Land your dream role by practicing with the exact questions <br />
+        <p className="text-lg sm:text-2xl lg:text-3xl text-white mt-6 text-center">
+          Land your dream role by practicing with the exact questions <br className="hidden sm:block" />
           you can expect in your interviews and on the job.
         </p>
       </div>
 
       {/* Centered Card */}
       <div className="flex-grow flex justify-center items-center">
-        <div className="bg-white text-black rounded-2xl shadow-lg max-w-md w-full py-10 px-6">
-          <h2 className="font-bold text-gray-600 mb-4">
+        <div className="bg-white text-black rounded-2xl shadow-lg w-full max-w-md py-10 px-6 sm:px-10">
+          <h2 className="font-bold text-gray-600 mb-4 text-center text-lg sm:text-xl">
             Clientside Pro Lifetime Access
           </h2>
 
-          <div className="text-6xl font-bold text-black mb-2">
+          <div className="text-4xl sm:text-6xl font-bold text-black mb-2 text-center">
             $39
-            <span className="font-bold text-sm text-gray-600"> /Lifetime access</span>
+            <span className="font-bold text-sm text-gray-600">
+              {" "} /Lifetime access
+            </span>
           </div>
 
-          <p className="text-sm text-gray-600 mb-10">
+          <p className="text-sm text-gray-600 mb-10 text-center">
             Includes all future platform updates
           </p>
 
@@ -50,16 +54,23 @@ function Box2() {
             ))}
           </div>
 
-          <button className="bg-black mb-4 text-white px-6 shadow-xl py-2 rounded-lg transition">
+          <button className="bg-black mb-4 text-white w-full py-2 rounded-lg font-semibold transition">
             Upgrade to Pro
           </button>
 
-          <div>
-            <a className="text-black underline font-bold">
+          <div className="text-center">
+            <a className="text-black underline font-bold cursor-pointer">
               Let me try the exercises first
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="mt-10 px-4">
+        <h2 className="font-bold text-white text-center text-sm sm:text-base leading-relaxed">
+          * Pro Tip: Many Clientside members have reimbursed <br className="hidden sm:block" />
+          their memberships as a part of their company's learning stipend
+        </h2>
       </div>
     </div>
   );

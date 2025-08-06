@@ -7,21 +7,32 @@ import Box1 from "./components/Box1";
 import Cards from "./components/Cards";
 import Content2 from "./components/Content2";
 import Box2 from "./components/Box2";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function App() {
+  
+useEffect(() => {
+  AOS.init({
+    duration: 1000, 
+    once: true,     
+  });
+}, []);
+
   return (
-    <div className=" bg-gray-100">
+    <div className="">
       <Navbar />
-      <div className="flex flex-wrap bg-gray-100 pt-36 flex-col justify-center items-center ">
-        <h1 className="mb-4 text-6xl text-center text-black font-sans font-bold">
+       <div className=" flex flex-wrap pt-36 flex-col justify-center items-center ">
+        
+        <h1  className="relative mb-4 text-6xl text-center text-black font-sans font-bold ">
           A new way to prep <br /> for frontend jobs.
         </h1>
 
         <h2 className="text-center text-black font-sans text-lg mb-4">
           Solve Javascript exercises and build React coding projects from actual
-          frontend interviews.
-        </h2>
-
+          frontend interviews.</h2>
+<img src="unnamed.png" className="h-80 absolute -right-0 bottom-14 translate-y-10 animate-bounce"/>
         <div className="self-center">
           <button
             type="button"
@@ -47,7 +58,7 @@ function App() {
           <img src={controllerIcon} alt="Controller Icon" className="h-14" />
         </div>
         <div>
-          <h1 className="mt-16 mb-16 text-7xl text-black font-sans font-bold self-start">
+          <h1 data-aos="fade-right" className="mt-16 mb-16 text-7xl text-black font-sans font-bold self-start">
             Frontend interview prep
             <br />
             can be summed up in
@@ -55,51 +66,54 @@ function App() {
             three words
           </h1>
 
-          <h1 className="text-5xl mb-16 text-right text-black font-sans font-bold leading-snug self-end">
+          <h1 data-aos="fade-left" className="text-5xl mb-16 text-right text-black font-sans font-bold leading-snug self-end">
             scattered, confusing, and time- <br />
             consuming.
           </h1>
         </div>
-<div className="flex flex-col items-start w-3/5 space-y-10">
-  <h1 className="text-3xl text-black font-sans leading-snug">
+{/* TEXT SECTION */}
+<div data-aos="fade-down" className="flex flex-col items-start w-full sm:w-4/5 lg:w-3/5 space-y-8 px-4 sm:px-0">
+  <h1 className="text-xl sm:text-2xl md:text-3xl text-black font-sans leading-snug">
     Just finding relevant problems to practice with is a challenging task.
   </h1>
 
-  <h1 className="text-3xl text-black font-sans leading-snug">
+  <h1 data-aos="fade-down" className="text-xl sm:text-2xl md:text-3xl text-black font-sans leading-snug">
     Usually, it involves hours of scouring through
     <span className="italic"> YouTube videos, Medium articles, and blog posts.</span>
     And even if you find a good practice problem, it's tough to know if you're
     meeting all the edge cases or have the best solution an employer may be looking for.
   </h1>
 
-  <h1 className="text-3xl text-black font-sans leading-snug mb-28">
+  <h1 data-aos="fade-down" className="text-xl sm:text-2xl md:text-3xl text-black font-sans leading-snug mb-20">
     This all-too-common process unnecessarily{" "}
     <span className="font-bold">strains you mentally</span> and eats up
     <span className="font-bold"> time better spent actually practicing…</span>
   </h1>
 </div>
-        <div>
-          <h1 className="text-5xl mb-16 text-right text-black font-sans italic font-semibold leading-snug self-end">
-            …which is precisely why
-            <br />
-            <span className="text-6xl not-italic">Clientside</span> was created…
-          </h1>
-        </div>
+
+<div className="w-full px-4 sm:px-0">
+  <h1 data-aos="fade-left" className="text-3xl sm:text-4xl md:text-5xl text-black font-sans italic font-semibold leading-snug text-center lg:text-right mb-16">
+    …which is precisely why
+    <br />
+    <span className="text-4xl sm:text-5xl md:text-6xl not-italic">Clientside</span> was created…
+  </h1>
+</div>
+
       </div>
       <Box1/>
-        <div className="flex  bg-gray-100 flex-col flex-wrap justify-center items-center">
-        <h1 className="text-black font-sans font-bold text-7xl mt-36 leading-1 ">Interactive<br></br>Learning</h1>
-        <h1 className="text-gray-600 font-sans font-medium text-2xl mt-10 mb-36 leading-snug ml-11">Practice without any setup in our<br></br> interactive code playground. All the <br></br>tools & starter code you need are<br></br> already there.</h1>
-        </div>
       <Content/>
       <Cards></Cards>
       <Content2/>
       <Box2/>
-      <footer className=" bg-gray-100 p-14"><hr className="mt-8"></hr>
-      <p className="mt-4 font-bold text-gray-600">© 2023 Clientside, LLC.</p></footer>
+      <footer className="  p-8 mx-16  "><hr className="mt-8"></hr>
+      <p className="mt-4 font-bold flex justify-between items-center text-gray-600">© 2023 Clientside, LLC.
+      <a href="/" target="_blank"><img src="Tiktok.webp" className="w-5 h-5"/></a></p></footer>
     </div>
   );
 }
 
 export default App;
+
+
+
 

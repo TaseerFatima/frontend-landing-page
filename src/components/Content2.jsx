@@ -1,13 +1,14 @@
 import React from 'react'
 
 function Content2() {
+  
   return (
-   <div className=" bg-gray-100 mb-11 text-black min-h-screen flex items-center justify-center px-4">
+   <div className="  mb-11 mt-36 text-black min-h-screen flex items-center justify-center px-4">
   <div className="max-w-3xl text-center">
     <h1 className="text-6xl font-bold mb-3">Did someone say <br className="sm:hidden" />Exercises?</h1>
     <p className="font-bold text-3xl text-black mb-16">Put your skills to the test with...</p>
     
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
       <div className="flex items-start space-x-2 mb-4">
         <span className="text-blue-600 text-xl">✓</span>
         <div>
