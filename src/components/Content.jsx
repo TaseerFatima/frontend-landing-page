@@ -145,7 +145,7 @@ useEffect(() => {
       questions to give yourself an edge over the<br />
       competition and help you land your dream job.
     </h2>
-      <div className="flex mt-10 justify-start mb-32">
+      <div className="flex mt-10 item-center mb-32">
   <button className="px-7 font-semibold text-2xl py-2.5 bg-blue-500 rounded-lg text-white ">
     Start Training Now 🥊
   </button>
@@ -155,7 +155,7 @@ useEffect(() => {
 
 </div>
 
-    <div className='mb-16 '>
+    <div className='mb-14 '>
         <h1 data-aos="zoom-in" className=" text-6xl text-center text-black font-sans font-bold">
         Congrats! You're going to<br></br> ace your next interview!
         </h1>

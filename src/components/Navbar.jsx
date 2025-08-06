@@ -19,7 +19,7 @@ function Navbar() {
         </button>
 
         
-        <button className="cursor-pointer sm:px-1 sm:py-1 font-bold rounded-md px-4 py-1 bg-black text-white">
+        <button className="cursor-pointer sm:px-1 sm:py-1 font-bold rounded-md px-2 py-1 bg-black text-white">
           Sign up
         </button>
 

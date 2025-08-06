@@ -23,7 +23,7 @@ useEffect(() => {
   return (
     <div className="">
       <Navbar />
-       <div className=" flex flex-wrap pt-36 flex-col justify-center items-center ">
+       <div className=" flex flex-wrap pt-36 flex-col justify-center overflow-x-hidden items-center w-full">
         
         <h1  className="relative mb-4 text-6xl text-center text-black font-sans font-bold ">
           A new way to prep <br /> for frontend jobs.
@@ -32,7 +32,12 @@ useEffect(() => {
         <h2 className="text-center text-black font-sans text-lg mb-4">
           Solve Javascript exercises and build React coding projects from actual
           frontend interviews.</h2>
-<img src="unnamed.png" className="h-80 absolute -right-0 bottom-14 translate-y-10 animate-bounce"/>
+          <img
+  src="unnamed.png"
+  className="h-64 sm:h-80 absolute right-0 bottom-14 animate-bounce max-w-full object-contain pointer-events-none"
+  alt="floating graphic"
+/>
+
         <div className="self-center">
           <button
             type="button"
@@ -117,6 +122,8 @@ useEffect(() => {
 }
 
 export default App;
+
+
 
 
 

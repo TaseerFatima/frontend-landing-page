@@ -3,7 +3,7 @@ import React from 'react'
 function Content2() {
   
   return (
-   <div className="  mb-11 mt-36 text-black min-h-screen flex items-center justify-center px-4">
+   <div className="  mb-8 mt-28 text-black min-h-screen flex items-center justify-center px-4">
   <div className="max-w-3xl text-center">
     <h1 className="text-6xl font-bold mb-3">Did someone say <br className="sm:hidden" />Exercises?</h1>
     <p className="font-bold text-3xl text-black mb-16">Put your skills to the test with...</p>
