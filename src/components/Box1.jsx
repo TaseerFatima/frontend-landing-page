@@ -31,40 +31,44 @@ function Box1() {
       <div className="flex-grow" />
 
 
-      <div data-aos="fade-up" className="absolute -bottom-10 bg-gradient-to-tl from-gray-700 to-black text-2xl font-mono rounded-xl shadow-lg px-32 py-12 text-white text-left w-fit mb-8">
-        <pre className="leading-10">
-          <ol className="list-decimal list-inside space-y-3">
-            <li>
-              <span className="text-purple-400">const</span>{" "}
-              <span className="text-blue-400">you</span> ={" "}
-              <span className="text-cyan-400">new FrontendEngineer()</span>
-            </li>
-            <li>
-              <span className="text-purple-400">const</span>{" "}
-              <span className="text-blue-400">clientside</span> ={" "}
-              <span className="text-cyan-400">useClientside()</span>
-            </li>
-            <li>
-              <span className="text-purple-400">const</span> {"{"}
-              <span className="text-yellow-400">isInterviewReady</span>
-              {"}"} = <span className="text-blue-400">you</span>
-            </li>
-            <li>
-              <span className="text-pink-400">while</span> (!
-              <span className="text-yellow-400">isInterviewReady()</span>)
-            </li>
-            <li className="ml-6">
-              <span className="text-blue-400">you</span>.
-              <span className="text-green-400">studyWith</span>(
-              <span className="text-blue-400">clientside</span>)
-            </li>
-            <li>
-              <span className="text-blue-400">you</span>.
-              <span className="text-indigo-400">landDreamJob()</span>
-            </li>
-          </ol>
-        </pre>
-      </div>
+<div
+  data-aos="fade-up"
+  className="absolute -bottom-10 bg-gradient-to-tl from-gray-700 to-black text-2xl font-mono rounded-xl shadow-lg px-6 sm:px-16 lg:px-32 py-8 sm:py-10 text-white text-left w-full sm:w-fit max-w-[95%] sm:max-w-none mx-auto mb-8"
+>
+  <pre className="leading-8 sm:leading-10 overflow-x-auto whitespace-pre-wrap">
+    <ol className="list-decimal list-inside space-y-3">
+      <li>
+        <span className="text-purple-400">const</span>{" "}
+        <span className="text-blue-400">you</span> ={" "}
+        <span className="text-cyan-400">new FrontendEngineer()</span>
+      </li>
+      <li>
+        <span className="text-purple-400">const</span>{" "}
+        <span className="text-blue-400">clientside</span> ={" "}
+        <span className="text-cyan-400">useClientside()</span>
+      </li>
+      <li>
+        <span className="text-purple-400">const</span> {"{"}
+        <span className="text-yellow-400">isInterviewReady</span>
+        {"}"} = <span className="text-blue-400">you</span>
+      </li>
+      <li>
+        <span className="text-pink-400">while</span> (!
+        <span className="text-yellow-400">isInterviewReady()</span>)
+      </li>
+      <li className="ml-6">
+        <span className="text-blue-400">you</span>.
+        <span className="text-green-400">studyWith</span>(
+        <span className="text-blue-400">clientside</span>)
+      </li>
+      <li>
+        <span className="text-blue-400">you</span>.
+        <span className="text-indigo-400">landDreamJob()</span>
+      </li>
+    </ol>
+  </pre>
+</div>
+
     </div>
   );
 }
