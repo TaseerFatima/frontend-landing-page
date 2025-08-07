@@ -15,6 +15,33 @@ function SignupPage() {
   };
 
   return (
+    <div>
+        <nav className="flex p-2 mt-0 bg-black flex-col sm:flex-row fixed top-0 z-30 w-full justify-between text-white shadow-md">
+      
+
+      <div className="logo">
+        <span className="font-bold text-xl cursor-pointer mx-8">
+          clientside
+        </span>
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 mx-9 sm:items-center mt-2 sm:mt-0">
+
+        
+        <button className="hidden sm:inline cursor-pointer font-bold hover:text-blue-500 transition-all">
+          Pricing
+        </button>
+      
+
+        
+        <button className="cursor-pointer sm:px-1 sm:py-1 font-bold rounded-md px-2 py-1 bg-white  text-black">
+          Sign up
+        </button>
+      
+      </div>
+    </nav>
+
+
     <div className="flex flex-col min-h-screen bg-black" >
 
       {/* Main Content */}
@@ -126,6 +153,7 @@ function SignupPage() {
           </a>
 
         </p></footer>
+    </div>
     </div>
   );
 }

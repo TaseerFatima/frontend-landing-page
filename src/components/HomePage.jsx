@@ -22,7 +22,7 @@ function HomePage() {
         <h2 className="text-center text-black font-sans text-lg mb-4">
           Solve Javascript exercises and build React coding projects from actual
           frontend interviews.</h2>
-          <img
+          <img data-aos="fade-down"
   src="unnamed.png"
   className="h-28  sm:h-64 md:h-80 absolute right-0 bottom-14 animate-bounce max-w-full object-contain pointer-events-none"
   alt="floating graphic"
