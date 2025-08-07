@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 function Navbar() {
   return (
@@ -12,17 +14,18 @@ function Navbar() {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 mx-9 sm:items-center mt-2 sm:mt-0">
-        
 
+        <Link to="/login">
         <button className="hidden sm:inline cursor-pointer font-bold hover:text-blue-500 transition-all">
           Login
         </button>
+        </Link>
 
-        
+        <Link to="/signup">
         <button className="cursor-pointer sm:px-1 sm:py-1 font-bold rounded-md px-2 py-1 bg-black text-white">
           Sign up
         </button>
-
+      </Link>
       </div>
     </nav>
   );
