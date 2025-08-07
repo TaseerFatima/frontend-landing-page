@@ -80,7 +80,7 @@ function SignupPage() {
       {/* Additional Info Grid */}
          <hr className="mt-12 mb-7  bg-slate-100"></hr>
 <div>
-         <div class="grid  mx-16 grid-cols-3 mt-6 gap-8 text-medium">
+         <div class="grid  mx-16 grid-cols-1 sm:grid-cols-3  mt-6 gap-8 text-medium">
          <div>
         <h3 class="font-bold text-white mb-3">Explore</h3>
         <ul class="space-y-3 text-gray-600">
