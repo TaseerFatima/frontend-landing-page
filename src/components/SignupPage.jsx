@@ -78,7 +78,7 @@ function SignupPage() {
       </div>
 
       {/* Additional Info Grid */}
-         <hr className="mt-12 mb-7  bg-slate-100"></hr>
+         <hr className="mt-12 mb-10  bg-slate-100"></hr>
 <div>
          <div class="grid  mx-16 grid-cols-1 sm:grid-cols-3  mt-6 gap-8 text-medium">
          <div>
@@ -113,7 +113,7 @@ function SignupPage() {
         </div>
   </div> 
 
- <hr className="mt-12 mb-7 mx-16  bg-slate-100"></hr>
+ <hr className="mt-12 mb-1 mx-16  bg-slate-100"></hr>
         <footer className="  p-4 mx-16  ">
               <p className="text-sm text-gray-500 sm:text-base flex justify-between font-bold">
           Made with ❤️ in Boston © {new Date().getFullYear()} Clientside, LLC.
