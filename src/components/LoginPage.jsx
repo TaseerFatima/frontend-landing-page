@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import { useGoogleLogin } from '@react-oauth/google';
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -26,6 +27,14 @@ function LoginPage() {
       setError("Invalid email or password");
     }
   };
+const login = useGoogleLogin({
+    flow: 'auth-code',
+  onSuccess: (tokenResponse) => {
+    console.log(tokenResponse);
+    navigate("/"); 
+  }
+});
+
 
   return (
     <div>
@@ -89,7 +98,7 @@ function LoginPage() {
 
           <h5 className="text-lg text-white text-center mt-2">OR</h5>
 
-           <button className="w-full p-2 border border-gray-500 rounded-md bg-transparent text-white hover:bg-gray-700 inline-flex items-center justify-center gap-2">
+           <button onClick={() => login()} className="w-full p-2 border border-gray-500 rounded-md bg-transparent text-white hover:bg-gray-700 inline-flex items-center justify-center gap-2">
             <img src="search.png" alt="search" className="w-4 h-4" />
             Sign Up with Google
            </button>

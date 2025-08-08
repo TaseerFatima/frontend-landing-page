@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import { useGoogleLogin } from '@react-oauth/google';
+
 
 function SignupPage() {
   const navigate = useNavigate();
@@ -13,13 +15,21 @@ function SignupPage() {
     alert("Signup successful!");
     navigate("/login");
   };
+const login = useGoogleLogin({
+  flow: 'auth-code', // must be outside of onSuccess
+  onSuccess: (tokenResponse) => {
+    console.log(tokenResponse);
+    navigate("/"); // redirect after successful login
+  },
+});
+
 
   return (
     <div>
         <nav className="flex p-2 mt-0 bg-black flex-col sm:flex-row fixed top-0 z-30 w-full justify-between text-white shadow-md">
       
 
-      <div className="logo">
+      <div className="logo"> 
         <span className="font-bold text-xl cursor-pointer mx-8">
           clientside
         </span>
@@ -86,7 +96,7 @@ function SignupPage() {
             Sign Up
           </button>
           <h5 className="text-lg text-white text-center font-medium">OR</h5>
-         <button className="w-full p-2 border border-gray-500 rounded-md bg-transparent text-white hover:bg-gray-700 inline-flex items-center justify-center gap-2">
+         <button onClick={() => login()} className="w-full p-2 border border-gray-500 rounded-md bg-transparent text-white hover:bg-gray-700 inline-flex items-center justify-center gap-2">
             <img src="search.png" alt="search" className="w-4 h-4" />
             Sign Up with Google
            </button>
