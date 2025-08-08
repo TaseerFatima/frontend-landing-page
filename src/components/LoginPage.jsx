@@ -28,12 +28,15 @@ function LoginPage() {
     }
   };
 const login = useGoogleLogin({
-    flow: 'auth-code',
   onSuccess: (tokenResponse) => {
     console.log(tokenResponse);
-    navigate("/"); 
-  }
+    navigate("/");
+  },
+  onError: () => {
+    console.error("Login Failed");
+  },
 });
+
 
 
   return (

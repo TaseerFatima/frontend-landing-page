@@ -16,12 +16,15 @@ function SignupPage() {
     navigate("/login");
   };
 const login = useGoogleLogin({
-  flow: 'auth-code', // must be outside of onSuccess
   onSuccess: (tokenResponse) => {
     console.log(tokenResponse);
-    navigate("/"); // redirect after successful login
+    navigate("/");
+  },
+  onError: () => {
+    console.error("Login Failed");
   },
 });
+
 
 
   return (
