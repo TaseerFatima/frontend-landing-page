@@ -10,7 +10,7 @@ function Navbar() {
 
   const handleLogout = () => {
     logout();
-    navigate("/login");
+    navigate("/");
   };
 
   useEffect(() => {
@@ -54,10 +54,10 @@ function Navbar() {
               onClick={() => setShowDropdown((prev) => !prev)}
             >
               <span className="font-bold text-xl">Pricing</span>
-             <div className="bg-gray-200 w-9 items-center flex justify-center h-9 rounded-full border"> <img
+             <div className="bg-gray-600 w-10 items-center flex justify-center h-10 rounded-full border"> <img
                 src="user.png"
                 alt="profile"
-                className="w-5 h-5 rounded-full border "
+                className="w-5 h-5 "
               /></div>
             </div>
 
