@@ -75,7 +75,7 @@ function Navbar() {
                   className="w-full inline-flex items-center space-x-2 px-4 py-2 text-bold text-white hover:bg-gray-600"
                 >
                   <img src="signout.png" alt="Logo" />
-                  Logout
+                  Signout
                 </button>
               </div>
             )}
