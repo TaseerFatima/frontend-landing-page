@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import { useAuth } from "../context/AuthContext";
 import { useGoogleLogin } from '@react-oauth/google';
 
 
 function SignupPage() {
   const navigate = useNavigate();
+  const { login: authLogin } = useAuth();
   const [user, setUser] = useState({ email: "", password: "", confirmpassword: "" });
 
   const handleChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
@@ -18,6 +20,7 @@ function SignupPage() {
 const login = useGoogleLogin({
   onSuccess: (tokenResponse) => {
     console.log(tokenResponse);
+    authLogin(tokenResponse);
     navigate("/");
   },
   onError: () => {
@@ -111,13 +114,15 @@ const login = useGoogleLogin({
           {/* Privacy Text */}
           <div className="text-gray-400 text-sm text-center">
             By signing up you agree to the{" "}
-            <a href="#" className="text-purple-600">Privacy Policy</a> &{" "}
-            <a href="#" className="text-purple-600">Terms of Service</a>, and to receive emails from Clientside to further your frontend career.
+            <a href="#" className="text-purple-600 hover:text-purple-600">Privacy Policy</a> &{" "}
+            <a href="#" className="text-purple-600 hover:text-purple-600">Terms of Service</a>, and to receive emails from Clientside to further your frontend career.
           </div>
+
+          <div className="mt-2 flex flex-row justify-center space-x-2 text-white text-sm"><p>Already have an account? </p><button onClick={() => navigate("/login")} className="text-purple-600 text-sm hover:underline hover:text-purple-700"> Login in</button></div>
         </form>
       </div>
 
-      {/* Additional Info Grid */}
+
          <hr className="mt-12 mb-10  bg-slate-100"></hr>
 <div>
          <div class="grid  mx-16 grid-cols-1 sm:grid-cols-3  mt-6 gap-8 text-medium">

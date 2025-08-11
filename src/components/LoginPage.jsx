@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import { useGoogleLogin } from '@react-oauth/google';
+import { useAuth } from "../context/AuthContext";
 
 function LoginPage() {
   const navigate = useNavigate();
+  const { login: authLogin } = useAuth();
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
 
@@ -30,6 +32,7 @@ function LoginPage() {
 const login = useGoogleLogin({
   onSuccess: (tokenResponse) => {
     console.log(tokenResponse);
+    authLogin(tokenResponse);
     navigate("/");
   },
   onError: () => {
@@ -110,7 +113,7 @@ const login = useGoogleLogin({
           </button>
 
           <div className="flex justify-center space-x-6 text-sm">
-            <button className="text-purple-600 hover:underline">Create an account</button>
+            <button onClick={() => navigate("/signup")} className="text-purple-600 hover:underline">Create an account</button>
             <button className="text-purple-600 hover:underline">Forgot Password?</button>
           </div>
         </form>

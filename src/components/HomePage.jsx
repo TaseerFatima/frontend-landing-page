@@ -8,6 +8,7 @@ import Box2 from "./Box2";
 import activisionLogo from "../assets/activision-logo.png";
 import controllerIcon from "../assets/controller-icon.png";
 
+
 function HomePage() {
   return (
 
@@ -15,7 +16,7 @@ function HomePage() {
     
        <div className=" flex flex-wrap pt-36 flex-col justify-center overflow-x-hidden items-center w-full">
         
-        <h1  className="relative mb-4 text-6xl text-center text-black font-sans font-bold ">
+        <h1  className="relative mb-4 text-6xl text-center text-black font-sans font-bold text-bold">
           A new way to prep <br /> for frontend jobs.
         </h1>
 
