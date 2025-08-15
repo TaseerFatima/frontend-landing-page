@@ -7,25 +7,21 @@ dotenv.config();
 console.log("CLIENT_ID:", process.env.GITHUB_CLIENT_ID);
 console.log("CLIENT_SECRET:", process.env.GITHUB_CLIENT_SECRET);
 
-
 const app = express();
 app.use(cors());
 
-// 1️⃣ Step 1 — Redirect to GitHub OAuth
+// Step 1 — Redirect to GitHub OAuth
 app.get("/auth/github", (req, res) => {
-  const redirect_uri = "http://localhost:5000/auth/github/callback";
+  const redirect_uri = `${process.env.BASE_URL}/auth/github/callback`;
   res.redirect(
     `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&redirect_uri=${redirect_uri}&scope=user`
   );
 });
 
-// 2️⃣ Step 2 — GitHub redirects back here with "code"
+// Step 2 — GitHub redirects back with "code"
 app.get("/auth/github/callback", async (req, res) => {
   const code = req.query.code;
-
-  if (!code) {
-    return res.status(400).json({ error: "No code provided" });
-  }
+  if (!code) return res.status(400).json({ error: "No code provided" });
 
   try {
     // Exchange "code" for access token
@@ -34,11 +30,9 @@ app.get("/auth/github/callback", async (req, res) => {
       {
         client_id: process.env.GITHUB_CLIENT_ID,
         client_secret: process.env.GITHUB_CLIENT_SECRET,
-        code: code,
+        code,
       },
-      {
-        headers: { Accept: "application/json" },
-      }
+      { headers: { Accept: "application/json" } }
     );
 
     const accessToken = tokenResponse.data.access_token;
@@ -51,7 +45,11 @@ app.get("/auth/github/callback", async (req, res) => {
     const userData = userResponse.data;
 
     // Send user data to frontend
-    res.redirect(`http://localhost:5173?user=${encodeURIComponent(JSON.stringify(userData))}`);
+    res.redirect(
+      `${process.env.FRONTEND_URL}?user=${encodeURIComponent(
+        JSON.stringify(userData)
+      )}`
+    );
   } catch (error) {
     console.error("GitHub OAuth error:", error.response?.data || error.message);
     res.status(500).json({ error: "OAuth failed" });
@@ -59,5 +57,5 @@ app.get("/auth/github/callback", async (req, res) => {
 });
 
 app.listen(5000, () => {
-  console.log("✅ Server running on http://localhost:5000");
+  console.log(`✅ Server running on ${process.env.BASE_URL}`);
 });
