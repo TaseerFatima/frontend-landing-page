@@ -6,13 +6,14 @@ function Box2() {
       {/* Top Heading */}
       <div className="mb-12">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-purple-200 to-purple-700 text-transparent bg-clip-text text-center leading-tight ">
-          Access the  #1 Frontend
-          <span >
+          Access the #1 Frontend
+          <span>
             <br /> Training Platform
           </span>
         </h2>
         <p className="text-lg sm:text-2xl lg:text-3xl text-white mt-6 text-center">
-          Land your dream role by practicing with the exact questions <br className="hidden sm:block" />
+          Land your dream role by practicing with the exact questions{" "}
+          <br className="hidden sm:block" />
           you can expect in your interviews and on the job.
         </p>
       </div>
@@ -27,7 +28,8 @@ function Box2() {
           <div className="text-4xl sm:text-6xl font-bold text-black mb-2 text-center">
             $39
             <span className="font-bold text-sm text-gray-600">
-              {" "} /Lifetime access
+              {" "}
+              /Lifetime access
             </span>
           </div>
 
@@ -49,7 +51,9 @@ function Box2() {
                 <div className="w-5 h-5 rounded-full bg-black text-white flex items-center justify-center text-xs">
                   ✓
                 </div>
-                <span className="font-bold text-gray-600 text-base">{text}</span>
+                <span className="font-bold text-gray-600 text-base">
+                  {text}
+                </span>
               </div>
             ))}
           </div>
@@ -68,7 +72,8 @@ function Box2() {
 
       <div className="mt-10 px-4">
         <h2 className="font-bold text-white text-center text-sm sm:text-base leading-relaxed">
-          * Pro Tip: Many Clientside members have reimbursed <br className="hidden sm:block" />
+          * Pro Tip: Many Clientside members have reimbursed{" "}
+          <br className="hidden sm:block" />
           their memberships as a part of their company's learning stipend
         </h2>
       </div>
