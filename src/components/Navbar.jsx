@@ -48,7 +48,7 @@ function Navbar() {
           </>
         ) : (
           <div className="relative" ref={dropdownRef}>
-            {/* Profile Icon */}
+            
             <div
               className="flex  items-center gap-4 cursor-pointer"
               onClick={() => setShowDropdown((prev) => !prev)}
@@ -61,7 +61,6 @@ function Navbar() {
               /></div>
             </div>
 
-            {/* Dropdown */}
             {showDropdown && (
               <div className="absolute right-0 mt-2 w-52 bg-black border border-gray-200 rounded-md shadow-lg z-50">
                 <button className="w-full inline-flex items-center space-x-2 px-4 py-2 text-white hover:bg-gray-600">
